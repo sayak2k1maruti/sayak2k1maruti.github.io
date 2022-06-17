@@ -3,8 +3,8 @@ import React from 'react'
 
 const Discover = ({ url }) => {
     return (
-        <a rel="noreferrer" href={`${url}`} target="_blank" className="flex pl-5 w-[13em] flex-row items-center justify-between transition-[width] duration-500 hover:w-[12em] hover:text-neutral-600 text-white"  >
-            <p className='text-xl text-neutral-600'>
+        <a rel="noreferrer" href={`${url}`} target="_blank" className="flex pl-5 w-[15vw] flex-row items-center justify-between transition-[width] duration-500 hover:w-[12vw] hover:text-neutral-600 text-white"  >
+            <p className='text-[1.50vw] text-neutral-600'>
                 Discover
             </p>
             <p className='w-[70px] h-[70px]'>

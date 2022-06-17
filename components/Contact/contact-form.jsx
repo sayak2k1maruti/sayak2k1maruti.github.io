@@ -66,28 +66,28 @@ const ContactForm = () => {
     }
 
     return (
-        <form onSubmit={handleSubmit} className=' text-slate-500 w-[90%] bg-white flex flex-col p-10 rounded-xl drop-shadow-lg'>
-            <p className='font-bold text-md'>NAME</p>
-            <input onChange={handleChange} className='text-xl appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500' name='name' value={inputs.name} placeholder='Enter your full name'></input>
+        <form onSubmit={handleSubmit} className=' text-slate-500 w-[90%] bg-white flex flex-col p-[2.5vw] rounded-[.75vw] drop-shadow-lg'>
+            <p className='font-bold text-[1vw]'>NAME</p>
+            <input onChange={handleChange} className='text-[1.5vw] appearance-none border-2 border-gray-200 rounded w-full py-[.5vw] px-[1vw] text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500' name='name' value={inputs.name} placeholder='Enter your full name'></input>
 
-            <p className='text-rose-600 py-2 mb-3 text-md font-bold'>
+            <p className='text-rose-600 py-[.5vw] mb-[.75vw] text-[1vw] font-bold'>
                 {inputs.error.name}
             </p>
 
-            <p className='opacity-80 font-bold text-md'>EMAIL</p>
-            <input onChange={handleChange} name='email' value={inputs.email} className='text-xl appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500' placeholder='Enter your email address'></input>
-            <p className='text-rose-600 py-2 mb-3 text-md font-bold'>
+            <p className='opacity-80 font-bold text-[1vw]'>EMAIL</p>
+            <input onChange={handleChange} name='email' value={inputs.email} className='text-[1.5vw] appearance-none border-2 border-gray-200 rounded w-full py-[.5vw] px-[1vw] text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500' placeholder='Enter your email address'></input>
+            <p className='text-rose-600 py-[.5vw] mb-[.75vw] text-[1vw] font-bold'>
                 {inputs.error.email}
             </p>
 
-            <p className='opacity-80 font-bold text-md'>MESSAGE</p>
-            <textarea onChange={handleChange} name="message" value={inputs.message} className='text-xl appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500' placeholder='Type your message'></textarea>
-            <p className='text-rose-600 py-2 mb-3 text-md font-bold'>
+            <p className='opacity-80 font-bold text-[1vw]'>MESSAGE</p>
+            <textarea onChange={handleChange} name="message" value={inputs.message} className='text-[1.5vw] appearance-none border-2 border-gray-200 rounded w-full py-[.5vw] px-[1vw] text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500' placeholder='Type your message'></textarea>
+            <p className='text-rose-600 py-[.5vw] mb-[.75vw] text-[1vw] font-bold'>
                 {inputs.error.message}
             </p>
 
             <br />
-            <button disabled={!buttonStatus} className='p-5 bg-blue-500 disabled:bg-blue-300 disabled:cursor-not-allowed hover:bg-blue-700 transition-colors duration-500 text-white rounded-full' type='submit'>SUBMIT</button>
+            <button disabled={!buttonStatus} className='p-[1.25vw] bg-blue-500 disabled:bg-blue-300 text-[1.5vw] disabled:cursor-not-allowed hover:bg-blue-700 transition-colors duration-500 text-white rounded-full' type='submit'>SUBMIT</button>
         </form>
     )
 }

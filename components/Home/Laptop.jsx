@@ -1,32 +1,35 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import DownArrow from '../Arrows/downArrow'
 import ReactVisibilitySensor from 'react-visibility-sensor'
 
 
 const Laptop = () => {
+    const thisDiv = useRef()
     const [laptopHoodStatus, setLaptopHoodStatus] = useState(false)
     const toggleLaptopHood = (isVisible) => {
-        //const scrolled = document.documentElement.scrollTop;
+        const scrolled = document.documentElement.scrollTop;
+        console.log(scrolled)
         if (isVisible) {
             setLaptopHoodStatus(true)
-        } else {
+        } else if (scrolled < window.screen.availHeight * .9) {
             setLaptopHoodStatus(false)
         }
         //console.log(scrolled)
     }
 
     const handleScrollToNext = () => {
+        console.log(thisDiv.current.getBoundingClientRect())
         window.scrollTo({
-            top: 1500,
+            top: window.screen.availHeight + thisDiv.current.getBoundingClientRect().height,
             behavior: 'smooth',
         });
     }
     return (
-        <div className='w-[95%] max-w-[720px] h-auto'>
-            <div className="body relative">
-                <div onClick={handleScrollToNext} className='w-20 h-20 absolute left-10 animate-bounce bottom-40 text-gray-50 hover:text-gray-600 transition-colors duration-300'>
-                    <DownArrow />
-                </div>
+        <div ref={thisDiv} className='w-[95%] relative'>
+            <div onClick={handleScrollToNext} className='w-20 z-[1000] h-20 absolute left-20 bottom-[15vw] animate-bounce  text-gray-50 hover:text-gray-600 transition-colors duration-300'>
+                <DownArrow />
+            </div>
+            <div className="body relative w-full">
                 <ReactVisibilitySensor onChange={toggleLaptopHood}>
                     <>
                         <div className="container ">
@@ -50,8 +53,8 @@ const Laptop = () => {
                             </div>
                         </div>
 
-                        <p className='text-center text-white text-xl p-4'>
-                            Click <a rel="noreferrer" className='text-amber-500 font-bold text-3xl hover:text-rose-500 transition-colors duration-500 ' href='/resumeGame/index.html' target='_blank'>here</a> to launch my interactive resume game in full screen or<br />play on above virtual Laptop
+                        <p className='text-center text-white text-[1.5vw] p-4'>
+                            Click <a rel="noreferrer" className='text-amber-500 font-bold text-[2.5vw] hover:text-rose-500 transition-colors duration-500 ' href='/resumeGame/index.html' target='_blank'>here</a> to launch my interactive resume game in full screen or<br />play on above virtual Laptop
                         </p>
                     </>
                 </ReactVisibilitySensor>
@@ -73,7 +76,8 @@ const Laptop = () => {
     .container {
         transform : scale(.4);
         position: relative;
-        perspective: 3500px;
+        top : 0;
+        perspective: 400vw;
         perspective-origin: bottom;
         --laptop--screen--width: 100vw;
         --aspect--ratio: calc(9/16);
@@ -108,9 +112,6 @@ const Laptop = () => {
         transform: rotateX(var(--laptop--hood--final--angle));
     }
 
-    .laptop-hood-container:hover {
-        transform: rotateX(var(--laptop--hood--final--angle));
-    }
 
     .laptop-hood {
         --webkit-transform-style: preserve-3d;
