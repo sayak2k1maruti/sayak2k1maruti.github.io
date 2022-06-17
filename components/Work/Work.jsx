@@ -30,7 +30,7 @@ const Work = ({ parentDiv }) => {
 
     const handleScrollDown = () => {
         parentDiv.current.scrollTo({
-            top: 500,
+            top: intro.current.getBoundingClientRect().height + 100,
             left: 0,
             behavior: 'smooth'
         })
@@ -38,16 +38,16 @@ const Work = ({ parentDiv }) => {
     return (
         <div className={`w-full transition-colors duration-1000 pt-10  bg-${bgColor}`}  >
 
-            <div ref={intro} className='flex justify-center items-center flex-col lg:flex-row-reverse'>
-                <img src={workingTableImage.src} className="w-[60%] p-10 hover:-translate-y-10 transition-all duration-500"></img>
-                <div className='w-[40%] text-zinc-100 flex flex-col items-center'>
-                    <h2 className='px-20 text-8xl font-normal m-3 py-5'>
+            <div ref={intro} className='flex h-screen justify-center items-center flex-col lg:flex-row-reverse'>
+                <img src={workingTableImage.src} className="w-[60%] p-[2.5vw] hover:-translate-y-10 transition-all duration-500"></img>
+                <div className='w-[40%] leading-none text-zinc-100 flex flex-col items-center'>
+                    <h2 className='px-20 text-[8vw] font-normal m-[.8vw] py-[1.25vw]'>
                         Featured
-                        <br />
+                        <br className='text-8xl' />
                         <ReactTyped
                             strings={[
-                                "<span class='text-7xl text-lime-400 font-bold'>Works</span>",
-                                "<span class='text-7xl text-lime-400 font-bold'>Projects</span></span>"
+                                "<span class='text-[7vw] text-lime-400 font-bold'>Works</span>",
+                                "<span class='text-[7vw] text-lime-400 font-bold'>Projects</span></span>"
                             ]}
                             typeSpeed={100}
                             backSpeed={50}
@@ -56,7 +56,7 @@ const Work = ({ parentDiv }) => {
                             smartBackspace
                         />
                     </h2>
-                    <p className='p-10 text-3xl w-full text-left'>
+                    <p className='p-[2.5vw] text-[2.5vw] w-full text-left'>
                         Experiences on
                         <br />
                         <ReactTyped
@@ -72,7 +72,7 @@ const Work = ({ parentDiv }) => {
                             smartBackspace
                         />
                     </p>
-                    <div onClick={handleScrollDown} className='w-20 h-20 opacity-60 hover:opacity-90 animate-bounce' >
+                    <div onClick={handleScrollDown} className='w-[5vw] h-[5vw] opacity-60 hover:opacity-90 animate-bounce' >
                         <DownArrow />
                     </div>
                 </div>

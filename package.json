@@ -10,7 +10,8 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy": "next build && next export && touch ./out/.nojekyll",
-    "deploy": "gh-pages -d out"
+    "deploy": "touch ./out/.nojekyll && gh-pages -d out",
+    "test": "neofetch"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
