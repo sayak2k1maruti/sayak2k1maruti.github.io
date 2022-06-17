@@ -1,0 +1,95 @@
+ .body {
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        flex-direction: column;
+    }
+
+    .container {
+        position: relative;
+        perspective: 2400px;
+        perspective-origin: bottom;
+        --laptop--screen--width: 50vw;
+        --aspect--ratio: calc(9/16);
+        --laptop--screen-height: calc(var(--aspect--ratio) * var(--laptop--screen--width));
+        --laptop--hood--initial--angle: -120deg;
+        --laptop--hood--final--angle: 0deg;
+        --laptop--keyboard--angle: -120deg;
+        --laptop--screen--width--adjustment: 10px;
+    }
+
+    .border-radius {
+        border-radius: 20px;
+    }
+
+    .background-img {
+        width: inherit;
+        height: inherit;
+    }
+
+    .laptop-hood-container {
+        --webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        position: relative;
+        width: var(--laptop--screen--width);
+        height: var(--laptop--screen-height);
+        transition: all 2s ease-in-out;
+        transform-origin: bottom;
+        transform: rotateX(var(--laptop--hood--initial--angle));
+    }
+
+    .laptop-hood-container:hover {
+        transform: rotateX(var(--laptop--hood--final--angle));
+    }
+
+    .laptop-hood {
+        --webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        backface-visibility: hidden;
+    }
+
+    .cover {
+        transform: rotateY(180deg);
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .screen {
+        position: relative;
+    }
+
+    .frame {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        pointer-events: none;
+    }
+
+    .laptop-bottom {
+        pointer-events: stroke;
+        position: absolute;
+        z-index: -10;
+        top: 0px;
+        transform-origin: bottom;
+        transform: rotateX(var(--laptop--keyboard--angle));
+        width: var(--laptop--screen--width);
+        height: var(--laptop--screen-height);
+        border-radius: 50px;
+    }
+
+    .wallpaper {
+
+        pointer-events: all;
+        width: calc(var(--laptop--screen--width) - var(--laptop--screen--width--adjustment)*2);
+        height: calc(var(--laptop--screen-height) - var(--laptop--screen--width--adjustment)*2);
+        margin-top: var(--laptop--screen--width--adjustment);
+        margin-left: var(--laptop--screen--width--adjustment);
+    }
