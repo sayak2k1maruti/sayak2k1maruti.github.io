@@ -11,11 +11,9 @@ import jerry from '../../assets/gifs/jerry.gif'
 import GoToTop from '../GoToTop/gototop'
 import ReactVisibilitySensor from 'react-visibility-sensor'
 import UpArrow from '../Arrows/upArrow'
-const defaultSidePane = {
-    status: false,
-    component: 'About'
-}
-const App = () => {
+import Link from 'next/link'
+
+const App = ({ sidePane, setSidePaneStatus }) => {
 
     const [bgColor, setBgColor] = useState('splash')
     const [sttVisible, setSttVisible] = useState(false)
@@ -26,7 +24,7 @@ const App = () => {
     const chnageBg = (color) => {
         setBgColor(color)
     }
-    const [sidePane, setSidePaneStatus] = useState(defaultSidePane)
+
     const handleSidePaneOpen = (name) => {
         const sidePaneStatus = {
             status: true,
@@ -69,6 +67,7 @@ const App = () => {
     }
     return (
         <div className='w-screen ' >
+
             <div onClick={scrollToTop} className='w-20 h-20 text-neutral-500 hover:text-neutral-600 fixed right-[7vw] bottom-10 animate-bounce z-50'>
                 {sttVisible ? <UpArrow /> : ''}
             </div>
@@ -77,16 +76,16 @@ const App = () => {
             <div className='fixed flex flex-col items-center right-0 w-[5vw] min-h-screen bg-lime-300'>
                 {
                     navigations.map((item, key) => (
-                        <nav onClick={() => handleSidePaneOpen(item)} name={item} className='text-[2vw] cursor-pointer text-neutral-900 font-bold hover:text-neutral-400 transition duration-500 pt-[.5vw] mt-[2.5vw] ' key={key} style={{ writingMode: 'vertical-lr' }}>
-                            {item}
+                        <nav name={item} className='text-[2vw] cursor-pointer text-neutral-900 font-bold hover:text-neutral-400 transition duration-500 pt-[.5vw] mt-[2.5vw] ' key={key} style={{ writingMode: 'vertical-lr' }}>
+                            <Link href={item}>
+                                {item}
+                            </Link>
                         </nav>
                     ))
                 }
             </div>
 
             <div onClick={handleSidePaneClose} className={`bg-${bgColor} transition-colors duration-1000 w-screen h-auto flex flex-col align-middle justify-center items-center pr-[5vw]`}>
-
-
 
                 <Landing />
 
