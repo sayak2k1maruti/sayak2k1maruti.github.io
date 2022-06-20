@@ -1,4 +1,4 @@
-const navigations = ["Work", "Skills", "Contact"]
+const navigations = ["Work", "Skill", "Contact"]
 
 const Interests = [
     'Full Stack Web Development',
