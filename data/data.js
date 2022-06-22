@@ -95,6 +95,6 @@ const Info = [
     }
 ]
 
-const resumeURL = 'https://docs.google.com/document/d/1awwHGpyhRx_0ocPTWBBQbTb2IhQZgLTU'
+const resumeURL = ''
 
 export { navigations, KeySkills, Interests, resumeURL, Info }
