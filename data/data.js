@@ -95,6 +95,6 @@ const Info = [
     }
 ]
 
-const resumeURL = 'https://docs.google.com/document/d/1awwHGpyhRx_0ocPTWBBQbTb2IhQZgLTU'
+const resumeURL = 'https://drive.google.com/drive/folders/1pBx5NCZQHfO03B6_KwW0ZucMvpU2-8tG?usp=sharing'
 
 export { navigations, KeySkills, Interests, resumeURL, Info }
