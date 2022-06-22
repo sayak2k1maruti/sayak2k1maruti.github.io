@@ -38,7 +38,7 @@ const Laptop = () => {
                                     <img className="background-img border-radius" src="./assets/images/laptop-cover.png" alt="" />
                                 </div>
                                 <div className="laptop-hood screen">
-                                    <iframe embedded={true} className="cover frame frameScale wallpaper"
+                                    <iframe embedded="true" className="cover frame frameScale wallpaper"
                                         src="/resumeGame/index.html" title="YouTube video player"
                                         frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media;  picture-in-picture"
