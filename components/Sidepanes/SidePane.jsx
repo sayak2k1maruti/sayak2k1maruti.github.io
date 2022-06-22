@@ -6,18 +6,18 @@ import GoToTop from '../GoToTop/gototop'
 import Skills from '../Skills/skills'
 import Work from '../Work/Work'
 
-const SidePane = ({ sidePane, setSidePaneStatus }) => {
+const SidePane = ({ sidePane }) => {
     const router = useRouter()
     const divRef = useRef()
-    const handleClose = () => {
-        setSidePaneStatus({ ...sidePane, status: false })
-        router.push('/')
-    }
+    // const handleClose = () => {
+    //     setSidePaneStatus({ ...sidePane, status: false })
+    //     router.push('/')
+    // }
     let component = undefined
     switch (sidePane.component) {
-        case 'Skill': component = <Skills parentDiv={divRef} />; break;
-        case 'Work': component = <Work parentDiv={divRef} />; break;
-        case 'Contact': component = <Contact />; break;
+        case 'skill': component = <Skills parentDiv={divRef} />; break;
+        case 'work': component = <Work parentDiv={divRef} />; break;
+        case 'contact': component = <Contact />; break;
         case 'default': component = <></>; break;
     }
     return (

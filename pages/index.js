@@ -9,7 +9,10 @@ const defaultSidePane = {
 }
 
 export default function Home() {
-  const [sidePane, setSidePaneStatus] = useState(defaultSidePane)
+  const sidePane = {
+    status: false,
+    component: ''
+  }
   return (
     <>
       <Head>
@@ -21,7 +24,7 @@ export default function Home() {
         <span className="bg-dark-200"></span>
         <span className="bg-dark-300"></span>
         <span className="bg-light-200"></span>
-        <App sidePane={sidePane} setSidePaneStatus={setSidePaneStatus} />
+        <App sidePane={sidePane} />
       </main>
     </>
   )

@@ -12,9 +12,10 @@ import GoToTop from '../GoToTop/gototop'
 import ReactVisibilitySensor from 'react-visibility-sensor'
 import UpArrow from '../Arrows/upArrow'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
-const App = ({ sidePane, setSidePaneStatus }) => {
-
+const App = ({ sidePane }) => {
+    const router = useRouter()
     const [bgColor, setBgColor] = useState('splash')
     const [sttVisible, setSttVisible] = useState(false)
     const about = useRef()
@@ -25,17 +26,17 @@ const App = ({ sidePane, setSidePaneStatus }) => {
         setBgColor(color)
     }
 
-    const handleSidePaneOpen = (name) => {
-        const sidePaneStatus = {
-            status: true,
-            component: name
-        }
-        setSidePaneStatus(sidePaneStatus)
-    }
+    // const handleSidePaneOpen = (name) => {
+    //     const sidePaneStatus = {
+    //         status: true,
+    //         component: name
+    //     }
+    //     setSidePaneStatus(sidePaneStatus)
+    // }
     const handleSidePaneClose = () => {
         if (!sidePane.status)
             return
-        setSidePaneStatus({ ...sidePane, status: false })
+        router.push('/')
     }
 
     useEffect(() => {
@@ -71,7 +72,7 @@ const App = ({ sidePane, setSidePaneStatus }) => {
             <div onClick={scrollToTop} className='w-20 h-20 text-neutral-500 hover:text-neutral-600 fixed right-[7vw] bottom-10 animate-bounce z-50'>
                 {sttVisible ? <UpArrow /> : ''}
             </div>
-            {sidePane.status ? <SidePane sidePane={sidePane} setSidePaneStatus={setSidePaneStatus} /> : ""}
+            {sidePane.status ? <SidePane sidePane={sidePane} /> : ""}
 
             <div className='fixed flex flex-col items-center right-0 w-[5vw] min-h-screen bg-lime-300'>
                 {
