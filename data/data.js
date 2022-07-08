@@ -66,16 +66,16 @@ const Info = [
         value: 'NIT Durgapur , Durgapur'
     },
     {
+        key: 'PIN Code',
+        value: '713 209'
+    },
+    {
         key: 'Email',
         value: 'sayakdas2k1@gmail.com'
     },
     {
         key: 'Work Email',
         value: 'sd.19u10153@btech.nitdgp.ac.in'
-    },
-    {
-        key: 'PIN Code',
-        value: '713 209'
     },
     {
         key: 'Occupation',
@@ -97,4 +97,7 @@ const Info = [
 
 const resumeURL = 'https://drive.google.com/drive/folders/1pBx5NCZQHfO03B6_KwW0ZucMvpU2-8tG?usp=sharing'
 
-export { navigations, KeySkills, Interests, resumeURL, Info }
+const aboutMe = `
+I am Sayak. Currently, I am a student at the National Institute of Technology Durgapur pursuing a Bachelor of Technology degree in Electronics and Communication Engineering. I am a vibrant and social person who loves taking on new challenges and learning new skills. I love meeting new people, swapping ideas and acquiring knowledge.
+`
+export { navigations, KeySkills, Interests, resumeURL, Info, aboutMe }
