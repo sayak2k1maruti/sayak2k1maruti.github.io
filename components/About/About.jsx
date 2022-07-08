@@ -1,7 +1,9 @@
+import Link from 'next/link'
 import React from 'react'
 import minion from '../../assets/images/minion.png'
 import selfie from '../../assets/images/selfie.jpg'
-import { resumeURL, Info } from '../../data/data'
+import { resumeURL, Info, aboutMe } from '../../data/data'
+import SocialAccounts from '../Contact/SocialAccounts'
 
 
 const About = () => {
@@ -15,8 +17,9 @@ const About = () => {
                     <h2 className='my-[.75vw] text-[9vw] font-bold'>
                         Hello There
                     </h2>
-                    <p className='p-[.5vw]  leading-[2.5vw] text-[2vw]'>
-                        I am a student 	&amp; I love to code.I read in National Institute of Technology Durgapur. Currently I am persuing a B.Tech in Electronics and Communication Engineering.
+                    <p className='p-[.5vw] px-[1.5vw] leading-[2.5vw] font-thin text-justify text-[1.7vw]'>
+                        {aboutMe}
+                        <SocialAccounts />
                     </p>
                 </div>
                 <img className='w-1/2 hover:-translate-y-10 transition-all duration-500 shadow-sm' src={minion.src}></img>
@@ -43,6 +46,13 @@ const About = () => {
                     </a>
                 </div>
             </div>
+            <p className='leading-[1.5vw] text-[1.8vw] w-full'>
+                Thank you for taking the time to go through my website. You can reach me via <a href='mailto:sayakdas2k1@gmail.com' className="text-blue-500">sayakdas2k1@gmail.com</a>
+                <br />
+                <br />
+                <b>P.S:</b> To jump ahead to the projects, click &nbsp;
+                <span className="text-blue-500"><Link href='/work'>here</Link></span>
+            </p>
         </div>
     )
 }

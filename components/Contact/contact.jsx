@@ -4,22 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ContactForm from './contact-form'
 import { faGamepad } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faGithubSquare, faInstagramSquare, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import SocialAccounts from './SocialAccounts'
 
 
-const socialAccounts = [
-    {
-        "element": <FontAwesomeIcon icon={faGithubSquare} size='2x' />,
-        "href": "https://github.com/sayak2k1maruti"
-    },
-    {
-        "element": <FontAwesomeIcon icon={faLinkedinIn} size='2x' />,
-        "href": "https://www.linkedin.com/in/sayak-das-2479901a3/"
-    },
-    {
-        "element": <FontAwesomeIcon icon={faInstagramSquare} size='2x' />,
-        "href": "https://www.instagram.com/"
-    }
-]
 
 const Contact = () => {
     return (
@@ -45,16 +32,8 @@ const Contact = () => {
                     <p className="text-[1.5vw]">Sayak Das</p>
                     <a rel="noreferrer" className="text-[1.5vw]" href='mailto:sayakds2k1@gmail.com'>sayakdask1@gmail.com</a>
 
-                    <div className='flex flex-row my-5'>
-                        {
-                            socialAccounts.map((item, key) => (
-                                <a rel="noreferrer" key={key} className='hover:-translate-y-2 text-neutral-400 px-2 transition-all duration-500 hover:text-neutral-100' href={item.href}>
-                                    {item.element}
-                                </a>
-                            ))
-                        }
 
-                    </div>
+                    <SocialAccounts />
 
                 </div>
             </div>
