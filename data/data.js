@@ -48,7 +48,7 @@ const KeySkills = [
     },
     {
         name: "Kotlin",
-        progress: 40
+        progress: 20
     }
 ]
 
@@ -58,8 +58,8 @@ const Info = [
         value: 'Sayak Das'
     },
     {
-        key: 'Date of Birth',
-        value: '17 September 2001'
+        key: 'Age',
+        value: '21'
     },
     {
         key: 'Current Address',
