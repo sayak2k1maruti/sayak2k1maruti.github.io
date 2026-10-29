@@ -6,6 +6,7 @@ import Landing from './Landing'
 import Laptop from './Laptop'
 import SidePane from '../Sidepanes/SidePane'
 import About from '../About/About'
+import QuickLinks from './QuickLinks'
 import jerry from '../../assets/gifs/jerry.gif'
 import UpArrow from '../Arrows/upArrow'
 import Link from 'next/link'
@@ -40,7 +41,8 @@ const App = ({ sidePane }) => {
         window.addEventListener('scroll', () => {
 
             if (about.current && thankYou.current && laptop.current) {
-                if (thankYou.current.getBoundingClientRect().y < 50) {
+                // go dark once Jerry is halfway up the screen; the page bottom can't scroll his top much higher
+                if (thankYou.current.getBoundingClientRect().y < window.innerHeight / 2) {
                     setSttVisible(false)
                     chnageBg('dark-100')
                 } else if (about.current.getBoundingClientRect().y < 70) {
@@ -66,16 +68,16 @@ const App = ({ sidePane }) => {
     return (
         <div className='w-screen ' >
 
-            <div onClick={scrollToTop} className='w-20 h-20 text-neutral-500 hover:text-neutral-600 fixed right-[7vw] bottom-10 animate-bounce z-50'>
+            <div onClick={scrollToTop} className='w-12 h-12 sm:w-20 sm:h-20 text-neutral-500 hover:text-neutral-600 fixed right-[max(48px,7vw)] bottom-10 animate-bounce z-50'>
                 {sttVisible ? <UpArrow /> : ''}
             </div>
             {sidePane.status ? <SidePane sidePane={sidePane} /> : ""}
 
-            <div className='fixed flex flex-col items-center right-0 w-[5vw] min-h-screen bg-lime-300'>
+            <div className='fixed flex flex-col items-center right-0 w-[max(36px,5vw)] min-h-screen bg-lime-300 z-40'>
                 {
                     navigations.map((item, key) => (
-                        <nav name={item} className='text-[2vw] cursor-pointer text-neutral-900 font-bold hover:text-neutral-400 transition duration-500 pt-[.5vw] mt-[2.5vw] ' key={key} style={{ writingMode: 'vertical-lr' }}>
-                            <Link href={item}>
+                        <nav name={item} className='text-[length:max(16px,2vw)] cursor-pointer text-neutral-900 font-bold hover:text-neutral-400 transition duration-500 pt-[.5vw] mt-[2.5vw] ' key={key} style={{ writingMode: 'vertical-lr' }}>
+                            <Link href={`/${item.toLowerCase()}`}>
                                 {item}
                             </Link>
                         </nav>
@@ -83,7 +85,7 @@ const App = ({ sidePane }) => {
                 }
             </div>
 
-            <div onClick={handleSidePaneClose} className={`bg-${bgColor} transition-colors duration-1000 w-screen h-auto flex flex-col align-middle justify-center items-center pr-[5vw]`}>
+            <div onClick={handleSidePaneClose} className={`bg-${bgColor} ${bgColor === 'dark-100' ? 'text-neutral-200' : 'text-black'} transition-colors duration-1000 w-screen h-auto flex flex-col align-middle justify-center items-center pr-[max(36px,5vw)]`}>
 
                 <Landing />
 
@@ -93,10 +95,11 @@ const App = ({ sidePane }) => {
 
                 <div ref={about}>
                     <About />
+                    <QuickLinks />
                 </div>
 
 
-                <img ref={thankYou} src={jerry.src} className='sm:w-[35vw] sm:h-[35vw] rounded-full hover:-translate-y-10 transition-all duration-500 mt-[10vw] mb-10'></img>
+                <img ref={thankYou} alt='Jerry waving goodbye' src={jerry.src} className='sm:w-[35vw] sm:h-[35vw] rounded-full hover:-translate-y-10 transition-all duration-500 mt-[10vw] mb-10'></img>
 
                 <Footer />
             </div>

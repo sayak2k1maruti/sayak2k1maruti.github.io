@@ -21,9 +21,9 @@ const SidePane = ({ sidePane }) => {
         case 'default': component = <></>; break;
     }
     return (
-        <div ref={divRef} className='sm:animate-openSidePane z-[1000] fixed overflow-y-scroll scroll-smooth sm:left-[10%] left-0  right-0 shadow-xl h-screen bg-dark-300'>
+        <div ref={divRef} className='sm:animate-openSidePane pt-14 sm:pt-0 z-[1000] fixed overflow-y-scroll scroll-smooth sm:left-[10%] left-0  right-0 shadow-xl h-screen bg-dark-300'>
             <Link href={'/'}>
-                <button className="h-20 w-20  absolute left-5 top-5 mb-5 cursor-pointer text-neutral-500 hover:text-neutral-700 transition-colors duration-500">
+                <button className="h-10 w-10 sm:h-20 sm:w-20 absolute left-3 top-3 sm:left-5 sm:top-5 mb-5 cursor-pointer text-neutral-500 hover:text-neutral-700 transition-colors duration-500">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                     </svg>

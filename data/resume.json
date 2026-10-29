@@ -1,0 +1,189 @@
+{
+    "name": "Sayak Das",
+    "contact": {
+        "email": "sayakdas2k1@gmail.com",
+        "website": "sayak2k1maruti.github.io",
+        "github": "github.com/sayak2k1maruti",
+        "linkedin": "linkedin.com/in/sayak-das-2479901a3",
+        "location": "Bengaluru, IN"
+    },
+    "experience": [
+        {
+            "company": "JPMorgan Chase & Co.",
+            "location": "Bengaluru, IN",
+            "roles": [
+                {
+                    "title": "Software Engineer II",
+                    "duration": "Jan 2026 – Present",
+                    "start": "2026-01",
+                    "end": null
+                },
+                {
+                    "title": "Software Engineer I",
+                    "duration": "June 2023 – Jan 2026",
+                    "start": "2023-06",
+                    "end": "2026-01"
+                },
+                {
+                    "title": "Software Engineer Intern",
+                    "duration": "Feb 2023 – June 2023",
+                    "start": "2023-02",
+                    "end": "2023-06"
+                }
+            ],
+            "highlights": [
+                {
+                    "title": "AI Audit Evidence Platform",
+                    "tag": "MXP – Top-3 Finalist",
+                    "metrics": [
+                        "5 minutes instead of 2 days (99% reduction)"
+                    ],
+                    "description": "Built an automated audit-evidence platform (Python, FastAPI, LangGraph, RAG Pipelines, React, Kubernetes) after mapping internal and external audit requirements across 10+ stakeholder workflows. The system indexes repository code alongside Git diffs, database state, and ServiceNow (SNOW) tickets to assemble first-draft audit evidence in 5 minutes instead of 2 days (99% reduction). Selected as a Top-3 Finalist in JPMC’s firmwide Market Excellence Program (MXP) and demoed to leadership for adoption across multiple lines of business.",
+                    "stack": [
+                        "Python",
+                        "FastAPI",
+                        "LangGraph",
+                        "RAG Pipelines",
+                        "React",
+                        "Kubernetes"
+                    ]
+                },
+                {
+                    "title": "Core Trade & Risk Management Platform",
+                    "tag": null,
+                    "metrics": [
+                        "5x the throughput",
+                        "$50M+"
+                    ],
+                    "description": "Drove key serialization and feed-processing changes in a team-led re-architecture of Python and Apache Avro equity trade pipelines using high-throughput pub/sub messaging (AMPS), reactive dependency-graph computation, and distributed object storage. Eliminated schema-serialization bottlenecks and hardened feed delivery across 3 regions (EMEA, AMER, and APAC), helping achieve 5x the throughput of the previous platform while supporting $50M+ in daily equity derivatives and stock trading volume.",
+                    "stack": [
+                        "Python",
+                        "Apache Avro",
+                        "AMPS"
+                    ]
+                },
+                {
+                    "title": "High-Throughput Risk & Regulatory Reporting",
+                    "tag": null,
+                    "metrics": [
+                        "98% (from 2 hours down to 2 minutes)"
+                    ],
+                    "description": "Cut end-to-end execution times for daily regulatory and risk reporting pipelines by 98% (from 2 hours down to 2 minutes). Replaced sequential, I/O-heavy data transformations with vectorized NumPy and Pandas computation, read-through caching, and Python multiprocessing.",
+                    "stack": [
+                        "NumPy",
+                        "Pandas",
+                        "Python"
+                    ]
+                },
+                {
+                    "title": "Cloud Data Lakehouse & Orchestration",
+                    "tag": null,
+                    "metrics": [
+                        "300K+ rows/day"
+                    ],
+                    "description": "Designed and shipped an event-driven cloud data lakehouse on Amazon S3 consolidating multi-regional equity and derivatives transaction feeds (300K+ rows/day). Configured AWS SQS-triggered Apache Spark (AWS Glue) ETL jobs writing into partitioned, ACID-compliant Apache Iceberg (Parquet) tables to eliminate full-bucket scans and speed up downstream analytical queries.",
+                    "stack": [
+                        "Amazon S3",
+                        "AWS SQS",
+                        "Apache Spark",
+                        "AWS Glue",
+                        "Apache Iceberg",
+                        "Parquet"
+                    ]
+                },
+                {
+                    "title": "Trade Lifecycle Telemetry & STP Scoring",
+                    "tag": "Project Chirality",
+                    "metrics": [],
+                    "description": "Led the equity derivatives engineering workstream for a firmwide straight-through processing (STP) initiative. Built a production monitoring and scoring engine that flags manual trade touchpoints across bookings and amendments, grading internal platforms on automated vs. manual processing percentages and establishing a manual-touchpoint benchmark to prioritize future engineering roadmaps.",
+                    "stack": []
+                },
+                {
+                    "title": "Agentic Operations Diagnostics Platform",
+                    "tag": null,
+                    "metrics": [],
+                    "description": "Developed an internal diagnostics platform for middle-office operations using Python, FastAPI, Tornado, LangGraph, React, and TypeScript. Connected a multi-step tool-calling state graph and MCP integrations across 16 backend diagnostic APIs and an incrementally indexed AST codebase RAG pipeline so operations teams can investigate blocked trades without escalating to engineering.",
+                    "stack": [
+                        "Python",
+                        "FastAPI",
+                        "Tornado",
+                        "LangGraph",
+                        "React",
+                        "TypeScript",
+                        "MCP"
+                    ]
+                }
+            ]
+        }
+    ],
+    "skills": [
+        {
+            "category": "Languages",
+            "items": [
+                "Python",
+                "TypeScript",
+                "JavaScript",
+                "SQL",
+                "C++"
+            ]
+        },
+        {
+            "category": "Web Frameworks",
+            "items": [
+                "FastAPI",
+                "Tornado",
+                "React",
+                "Node.js",
+                "Next.js",
+                "Express.js",
+                "REST APIs"
+            ]
+        },
+        {
+            "category": "Data Engineering & AI",
+            "items": [
+                "Apache Spark",
+                "Apache Iceberg",
+                "Parquet",
+                "Apache Avro",
+                "AMPS",
+                "Pandas",
+                "NumPy",
+                "LangGraph",
+                "LangChain",
+                "LLMs",
+                "RAG Pipelines",
+                "MCP Servers"
+            ]
+        },
+        {
+            "category": "Cloud & Infrastructure",
+            "items": [
+                "AWS (Glue, S3, SQS, EC2, ECS)",
+                "Kubernetes",
+                "Distributed Systems",
+                "Event-Driven Data Lakes"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "National Institute of Technology (NIT) Durgapur",
+            "degree": "B.Tech",
+            "major": "Electronics & Communication Engineering",
+            "cgpa": "9.03 / 10.0",
+            "duration": "2019 – 2023",
+            "location": "Durgapur, IN"
+        }
+    ],
+    "publications": [
+        {
+            "authors": "S. Das, A. K. Mandal, R. Ghatak, A. Banerjee, and T. Chakravarty",
+            "title": "Design of Reconfigurable Metasurface for Beam Steering Applications in Next Generation Communication Systems",
+            "venue": "2023 8th International Conference on Computers and Devices for Communication (CODEC), Kolkata, India",
+            "year": "2023",
+            "doi": "10.1109/CODEC60112.2023.10466095",
+            "url": "https://doi.org/10.1109/CODEC60112.2023.10466095"
+        }
+    ]
+}

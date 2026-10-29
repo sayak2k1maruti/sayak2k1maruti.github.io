@@ -24,7 +24,7 @@ const GoToTop = ({ div }) => {
         <>
             {
                 visible ?
-                    <div onClick={handleScroll} className="fixed bottom-10 right-10 w-20 h-20 opacity-50 z-50 hover:opacity-70 transition-opacity " >
+                    <div onClick={handleScroll} className="fixed bottom-6 right-6 w-12 h-12 sm:bottom-10 sm:right-10 sm:w-20 sm:h-20 opacity-50 z-50 hover:opacity-70 transition-opacity " >
                         <UpArrow />
                     </div >
                     :

@@ -3,19 +3,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ContactForm from './contact-form'
 import { faGamepad } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faGithubSquare, faInstagramSquare, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
+import { Profile } from '../../data/data'
 
 const socialAccounts = [
     {
         "element": <FontAwesomeIcon icon={faGithubSquare} size='2x' />,
-        "href": "https://github.com/sayak2k1maruti"
+        "href": Profile.github
     },
     {
         "element": <FontAwesomeIcon icon={faLinkedinIn} size='2x' />,
-        "href": "https://www.linkedin.com/in/sayak-das-2479901a3/"
+        "href": Profile.linkedin
     },
     {
         "element": <FontAwesomeIcon icon={faInstagramSquare} size='2x' />,
-        "href": "https://www.instagram.com/"
+        "href": "https://www.instagram.com/sayak2k1/"
     }
 ]
 

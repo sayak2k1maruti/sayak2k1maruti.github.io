@@ -8,17 +8,14 @@ const Laptop = () => {
     const [laptopHoodStatus, setLaptopHoodStatus] = useState(false)
     const toggleLaptopHood = (isVisible) => {
         const scrolled = document.documentElement.scrollTop;
-        console.log(scrolled)
         if (isVisible) {
             setLaptopHoodStatus(true)
         } else if (scrolled < window.screen.availHeight * .9) {
             setLaptopHoodStatus(false)
         }
-        //console.log(scrolled)
     }
 
     const handleScrollToNext = () => {
-        console.log(thisDiv.current.getBoundingClientRect())
         window.scrollTo({
             top: window.screen.availHeight + thisDiv.current.getBoundingClientRect().height,
             behavior: 'smooth',
@@ -26,7 +23,7 @@ const Laptop = () => {
     }
     return (
         <div ref={thisDiv} className='w-[95%] relative'>
-            <div onClick={handleScrollToNext} className='w-20 z-[1000] h-20 absolute left-20 bottom-[15vw] animate-bounce  text-gray-50 hover:text-gray-600 transition-colors duration-300'>
+            <div onClick={handleScrollToNext} className='hidden sm:block w-20 z-[1000] h-20 absolute left-20 bottom-[15vw] animate-bounce  text-gray-50 hover:text-gray-600 transition-colors duration-300'>
                 <DownArrow />
             </div>
             <div className="body relative w-full">
@@ -49,12 +46,13 @@ const Laptop = () => {
                                 </div>
                             </div>
                             <div className="laptop-bottom">
-                                <img src="./assets/images/laptop_keyboard.png" className="background-img border-radius" />
+                                <img alt="" src="./assets/images/laptop_keyboard.png" className="background-img border-radius" />
                             </div>
                         </div>
 
-                        <p className='text-center text-white text-[1.5vw] p-4'>
-                            Click <a rel="noreferrer" className='text-amber-500 font-bold text-[2.5vw] hover:text-rose-500 transition-colors duration-500 ' href='/resumeGame/index.html' target='_blank'>here</a> to launch my interactive resume game in full screen or<br />play on above virtual Laptop
+                        <p className='text-center text-white text-[length:max(16px,1.5vw)] p-4'>
+                            Click <a rel="noreferrer" className='text-amber-500 font-bold text-[length:max(20px,2.5vw)] hover:text-rose-500 transition-colors duration-500 ' href='/resumeGame/index.html' target='_blank'>here</a> to launch my interactive resume game in full screen or<br />play on above virtual Laptop
+                            <span className='sm:hidden block mt-2 text-neutral-400 text-[14px]'>Best played on a laptop or desktop screen.</span>
                         </p>
                     </>
                 </ReactVisibilitySensor>

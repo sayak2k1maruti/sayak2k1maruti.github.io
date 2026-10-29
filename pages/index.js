@@ -16,10 +16,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Portfolio of Sayak</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Sayak Das | Software Engineer</title>
       </Head>
-      <main onLoad={() => console.log('complete')} className="bg-dark-100">
+      <main className="bg-dark-100">
         <span className="bg-dark-100" ></span>
         <span className="bg-dark-200"></span>
         <span className="bg-dark-300"></span>

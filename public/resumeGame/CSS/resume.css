@@ -1,8 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-@font-face{
-    font-family:"Worstveld Sling W05 Regular";
-    src:url("../Fonts/5111847/78668ee0-b774-4508-85de-f45a8ad0f43a.woff2") format("woff2"),url("../Fonts/5111847/1c01f33d-6612-46fe-b61b-4b88340eb3c2.woff") format("woff");
-}
 main,body,html,h1,h2,h3,h4,h5,h6,p,aside,footer,section{
   margin: 0px;
   padding: 0px;
@@ -17,7 +13,7 @@ main{
   height: 100vh;
 }
 #maincontent{
-  width: 30000px;
+  width: 60000px;
   position: fixed;
   bottom: 0px;
   left: 0;
@@ -192,7 +188,7 @@ div img{
   top: 80%;
 }
 #tree10{
-  left: 4180px;
+  left: 3330px;
   background-image: url("/resumeGame/images/tree-dark-d.png");
   top: 80%;
 }
@@ -382,16 +378,6 @@ div img{
     font-size: 45px;
   }
 }
-#college{
-  width: 486px;
-  height: 330px;
-  position: absolute;
-  top: 80vh;
-  margin-top: -330px;
-  left: 3700px;
-  background-size: 100% 100%;
-  background-image: url("/resumeGame/images/college.png");
-}
 .bump{
   position: absolute;
   height: 100px;
@@ -543,13 +529,6 @@ div img{
   bottom: 400vh;
   background-image: url("/resumeGame/images/cpp.png");
 }
-#java{
-  position: absolute;
-  width: 300px;
-  height: 230px;
-  bottom: 500vh;
-  background-image: url("/resumeGame/images/java.png");
-}
 #js{
   position: absolute;
   width: 300px;
@@ -564,12 +543,28 @@ div img{
   bottom: 600vh;
   background-image: url("/resumeGame/images/kotlin.png");
 }
-#php{
+#llm{
   position: absolute;
   width: 300px;
   height: 230px;
   bottom: 800vh;
-  background-image: url("/resumeGame/images/php.png");
+  background-image: url("/resumeGame/images/llm.png");
+}
+#rag{
+  position: absolute;
+  left: 700px;
+  width: 300px;
+  height: 230px;
+  bottom: 550vh;
+  background-image: url("/resumeGame/images/rag.png");
+}
+#agents{
+  position: absolute;
+  left: 700px;
+  width: 600px;
+  height: 230px;
+  bottom: 750vh;
+  background-image: url("/resumeGame/images/agents.png");
 }
 #python{
   position: absolute;
@@ -877,6 +872,12 @@ div img{
   }
 }
 #backToHome{
+    width: 72px;
+    height: 40px;
+    font-size: 1.05rem;
+  }
+}
+#backToHome{
   width: 100px;
   height: 50px;
   position: fixed;
@@ -982,4 +983,144 @@ div img{
 @keyframes pace-theme-center-circle-spin {
   from { transform: rotateY(0deg) }
   to { transform: rotateY(360deg) }
+}
+/* Career chapter: #career is placed at the rocket's landing point by resume.js */
+#career{
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 8000px;
+}
+.career-tree{
+  top: 80%;
+}
+#signBoard-career{
+  left: 1300px;
+}
+#signBoard-sde1{
+  left: 3000px;
+}
+#signBoard-reporting{
+  left: 3550px;
+}
+#signBoard-throughput{
+  left: 4500px;
+}
+#signBoard-sde2{
+  left: 5100px;
+}
+#signBoard-mxp{
+  left: 6050px;
+}
+#career #toBeContinue{
+  left: 6600px;
+  margin-left: 0;
+}
+
+/* Real photos hung in a frame like the Chandannagar one (frame1.png), at 80% size to fit beside the college sign */
+.framed-photo{
+  position: absolute;
+  top: 80%;
+  width: 480px;
+  height: 360px;
+  margin-top: -368px;
+}
+.framed-photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.photo-frame{
+  position: absolute;
+  top: 80%;
+  width: 560px;
+  height: 566px;
+  margin-top: -566px;
+  pointer-events: none;
+  background-size: 100% 100%;
+  background-image: url("/resumeGame/images/frame1.png");
+}
+#nit{
+  left: 3940px;
+}
+#nitFrame{
+  left: 3900px;
+}
+/* Drop-in like the Chandannagar frame: raised until Sayak walks up (toggled by dropFrames in resume.js) */
+.framed-photo, .photo-frame{
+  transition-duration: 1s;
+  transition-property: all;
+}
+#nit.raised{
+  margin-top: -640px;
+}
+#nitFrame.raised{
+  margin-top: -640px;
+}
+/* JPMC photo uses the full-size frame, like Chandannagar */
+#jpmc{
+  left: 1750px;
+  width: 600px;
+  height: 450px;
+  margin-top: -460px;
+}
+#jpmcFrame{
+  left: 1700px;
+  width: 700px;
+  height: 708px;
+  margin-top: -708px;
+}
+#jpmc.raised, #jpmcFrame.raised{
+  margin-top: -800px;
+}
+/* long sign titles ("Graduated") at a size that fits the board */
+.signBoardText.long-title h2{
+  font-size: 54px;
+}
+@media all and (max-width:641px) {
+  .signBoardText.long-title h2{
+    font-size: 36px;
+  }
+}
+/* Wormhole at the end of the skills flight: centred on the rocket's flight line (see WORMHOLE_X in resume.js) */
+#wormhole{
+  position: absolute;
+  left: 15400px;
+  bottom: calc(920vh - 170px);
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+}
+#wormhole::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(#bef264, #14b8a6, #72b626, #ecfccb, #bef264, #14b8a6, #72b626, #bef264);
+  -webkit-mask: radial-gradient(circle, transparent 16%, #000 30%, #000 50%, transparent 70%);
+  mask: radial-gradient(circle, transparent 16%, #000 30%, #000 50%, transparent 70%);
+  filter: blur(4px);
+  animation: wormholeSpin 2.5s linear infinite;
+}
+#wormhole::after{
+  content: '';
+  position: absolute;
+  inset: 30%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #000000 45%, #052e16 75%, transparent 100%);
+  box-shadow: 0 0 80px 30px #84cc1699;
+}
+@keyframes wormholeSpin{
+  from{ transform: rotate(0deg) scale(1); }
+  50%{ transform: rotate(180deg) scale(1.06); }
+  to{ transform: rotate(360deg) scale(1); }
+}
+/* full-screen flash while the rocket teleports through the wormhole */
+#warp{
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  opacity: 0;
+  pointer-events: none;
+  background: radial-gradient(circle, #ffffff 0%, #ecfccb 22%, #72b626 55%, #052e16 100%);
 }
