@@ -52,7 +52,7 @@ const Laptop = () => {
 
                         <p className='text-center text-white text-[length:max(16px,1.5vw)] p-4'>
                             Click <a rel="noreferrer" className='text-amber-500 font-bold text-[length:max(20px,2.5vw)] hover:text-rose-500 transition-colors duration-500 ' href='/resumeGame/index.html' target='_blank'>here</a> to launch my interactive resume game in full screen or<br />play on above virtual Laptop
-                            <span className='sm:hidden block mt-2 text-neutral-400 text-[14px]'>Best played on a laptop or desktop screen.</span>
+                            <span className='sm:hidden block mt-2 text-neutral-400 text-[14px]'>On a phone? Tap here, then turn it sideways to play.</span>
                         </p>
                     </>
                 </ReactVisibilitySensor>
@@ -152,6 +152,21 @@ const Laptop = () => {
         width: var(--laptop--screen--width);
         height: var(--laptop--screen-height);
         border-radius: 50px;
+    }
+
+    /* Phones: give the game a laptop-sized 1280x720 screen and shrink the whole laptop to fit */
+    @media (max-width: 640px) {
+        .body {
+            overflow-x: clip;
+        }
+        .container {
+            --laptop--screen--width: 1280px;
+            width: 1280px;
+            transform: scale(.22);
+            left: 50%;
+            margin: -281px 0 -120px -640px;
+            align-self: flex-start;
+        }
     }
 
     .wallpaper {

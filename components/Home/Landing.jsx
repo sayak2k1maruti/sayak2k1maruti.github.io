@@ -40,7 +40,7 @@ const Landing = () => {
                 <button onClick={handleScrollToNext} className='group mt-[max(28px,3vw)] flex flex-row items-center gap-3 rounded-full border border-highlight-100 px-[max(18px,1.6vw)] py-[max(10px,.8vw)] text-left text-white hover:bg-highlight-100 hover:text-dark-100 transition-colors duration-500'>
                     <span className='text-[length:max(20px,1.8vw)]'>🎮</span>
                     <span className='text-[length:max(14px,1.25vw)] leading-snug'>
-                        Don&apos;t miss my <b className='text-highlight-100 group-hover:text-dark-100 transition-colors duration-500'>interactive resume game</b><span className='hidden sm:inline'>, scroll down to play!</span><span className='sm:hidden'>, best played on a larger screen!</span>
+                        Don&apos;t miss my <b className='text-highlight-100 group-hover:text-dark-100 transition-colors duration-500'>interactive resume game</b><span className='hidden sm:inline'>, scroll down to play!</span><span className='sm:hidden'>, turn your phone sideways to play!</span>
                     </span>
                 </button>
             </div >

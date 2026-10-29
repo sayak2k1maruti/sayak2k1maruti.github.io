@@ -4,8 +4,28 @@
 <head>
     <meta charset="utf-8">
     <title>Sayak's</title>
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <meta content="height=device-height, initial-scale=1" name="viewport" />
+    <meta id="viewport" content="width=device-width, initial-scale=1" name="viewport" />
+    <script>
+        // Phones held sideways: lay the game out 720px tall, like a laptop screen, and let the phone scale it down.
+        // Upright phones get the "turn your phone" screen instead (see #rotate in resume.css).
+        var GAME_HEIGHT = 720;
+        function fitViewport() {
+            var meta = document.getElementById("viewport");
+            var shortSide = Math.min(screen.width, screen.height);
+            var longSide = Math.max(screen.width, screen.height);
+            var landscape = window.matchMedia("(orientation: landscape)").matches;
+            if (window.self !== window.top || shortSide >= 600 || !landscape) {
+                meta.content = "width=device-width, initial-scale=1";
+                return;
+            }
+            var width = Math.round(longSide * GAME_HEIGHT / shortSide);
+            var scale = longSide / width;
+            meta.content = "width=" + width + ", initial-scale=" + scale + ", maximum-scale=" + scale + ", user-scalable=no";
+        }
+        fitViewport();
+        window.addEventListener("orientationchange", function () { setTimeout(fitViewport, 200); });
+        window.matchMedia("(orientation: landscape)").addEventListener("change", fitViewport);
+    </script>
     <link rel="stylesheet" href="/resumeGame/CSS/resume.css">
     <script src="/resumeGame/JS/pace.js"></script>
     <script src="/resumeGame/JS/jquery.js"></script>
@@ -32,6 +52,11 @@
 </head>
 
 <body>
+    <div id="rotate">
+        <div class="rotatePhone"></div>
+        <p>Turn your phone sideways<br>to play my resume game</p>
+        <a href="/" target="_top">Back to the site</a>
+    </div>
     <div id="load" style="width: 100vw;height: 100vh;">Loading...</div>
     <main style="opacity:.1">
         <div id="cloud-container">

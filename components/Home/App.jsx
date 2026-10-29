@@ -73,7 +73,7 @@ const App = ({ sidePane }) => {
             </div>
             {sidePane.status ? <SidePane sidePane={sidePane} /> : ""}
 
-            <div className='fixed flex flex-col items-center right-0 w-[max(36px,5vw)] min-h-screen bg-lime-300 z-40'>
+            <div className='fixed flex flex-col items-center top-0 bottom-0 right-0 w-[max(36px,5vw)] min-h-screen h-[100lvh] bg-lime-300 z-40'>
                 {
                     navigations.map((item, key) => (
                         <nav name={item} className='text-[length:max(16px,2vw)] cursor-pointer text-neutral-900 font-bold hover:text-neutral-400 transition duration-500 pt-[.5vw] mt-[2.5vw] ' key={key} style={{ writingMode: 'vertical-lr' }}>
@@ -89,7 +89,7 @@ const App = ({ sidePane }) => {
 
                 <Landing />
 
-                <div ref={laptop}>
+                <div ref={laptop} className='w-full flex justify-center'>
                     <Laptop />
                 </div>
 
