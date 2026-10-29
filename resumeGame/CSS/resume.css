@@ -1124,3 +1124,46 @@ div img{
   pointer-events: none;
   background: radial-gradient(circle, #ffffff 0%, #ecfccb 22%, #72b626 55%, #052e16 100%);
 }
+
+/* Upright phones: ask for landscape (index.html scales the game to fit a sideways phone) */
+#rotate{
+  display: none;
+}
+@media (orientation: portrait) and (max-width: 600px){
+  #rotate{
+    display: flex;
+    position: fixed;
+    inset: 0;
+    z-index: 3000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    background: #00bff3;
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Comic Neue', cursive;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  #rotate a{
+    padding: 10px 22px;
+    background: #00000088;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+  }
+}
+.rotatePhone{
+  width: 64px;
+  height: 112px;
+  border: 6px solid #ffffff;
+  border-radius: 14px;
+  box-shadow: 6px 6px 0 #00000055;
+  animation: rotatePhone 2.4s ease-in-out infinite;
+}
+@keyframes rotatePhone{
+  0%, 25%{ transform: rotate(0deg); }
+  50%, 85%{ transform: rotate(-90deg); }
+  100%{ transform: rotate(0deg); }
+}
