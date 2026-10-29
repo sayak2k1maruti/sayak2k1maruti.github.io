@@ -34,7 +34,7 @@ const App = ({ sidePane }) => {
     const handleSidePaneClose = () => {
         if (!sidePane.status)
             return
-        router.push('/')
+        router.push('/', undefined, { scroll: false })
     }
 
     useEffect(() => {
@@ -77,7 +77,7 @@ const App = ({ sidePane }) => {
                 {
                     navigations.map((item, key) => (
                         <nav name={item} className='text-[length:max(16px,2vw)] cursor-pointer text-neutral-900 font-bold hover:text-neutral-400 transition duration-500 pt-[.5vw] mt-[2.5vw] ' key={key} style={{ writingMode: 'vertical-lr' }}>
-                            <Link href={`/${item.toLowerCase()}`}>
+                            <Link href={`/${item.toLowerCase()}`} scroll={false}>
                                 {item}
                             </Link>
                         </nav>

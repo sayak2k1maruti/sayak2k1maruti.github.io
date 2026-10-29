@@ -15,7 +15,7 @@ const QuickLinks = () => {
             <div className='flex flex-col sm:flex-row gap-[max(16px,2vw)]'>
                 {
                     panes.map((pane, key) => (
-                        <Link href={pane.href} key={key}>
+                        <Link href={pane.href} key={key} scroll={false}>
                             <a className='group flex-1 flex flex-col bg-dark-300 text-white rounded-lg p-[max(20px,2vw)] shadow-lg hover:-translate-y-2 hover:shadow-xl transition-all duration-500'>
                                 <span className='text-[length:max(16px,1.5vw)] font-thin text-neutral-400'>{pane.small}</span>
                                 <span className='text-[length:max(36px,4.5vw)] leading-none font-bold text-highlight-100 my-[max(8px,.75vw)]'>{pane.big}</span>

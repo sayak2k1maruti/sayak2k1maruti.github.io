@@ -1167,3 +1167,14 @@ div img{
   50%, 85%{ transform: rotate(-90deg); }
   100%{ transform: rotate(0deg); }
 }
+
+/* Holding the arrow buttons on a phone is a long-press: don't select the page, show the copy menu or flash */
+html, body{
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+#moveleft, #moveright{
+  touch-action: none;
+}
