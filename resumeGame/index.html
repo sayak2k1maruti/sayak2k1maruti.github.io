@@ -32,7 +32,7 @@
 </head>
 
 <body>
-    <div id="load" style="width: 100vw;height: 100vh;">Loadig...</div>
+    <div id="load" style="width: 100vw;height: 100vh;">Loading...</div>
     <main style="opacity:.1">
         <div id="cloud-container">
             <div id="clouds"></div>
@@ -59,11 +59,15 @@
             <div id="tree8" class="tree"></div>
             <div id="tree9" class="tree"></div>
             <div id="signBoard-College" class="signboard">
-                <div class="signBoardText">
-                    <h2>Student</h2>Styding in National Institute of Technology Durgapur
+                <div class="signBoardText long-title">
+                    <h2>Graduated</h2>B.Tech, NIT Durgapur 2019 – 2023
                 </div>
             </div>
-            <div id="college"></div>
+            <!-- NIT Durgapur, hung in a smaller copy of the Chandannagar frame -->
+            <div id="nit" class="framed-photo raised">
+                <img src="/resumeGame/images/nit-durgapur.jpg" alt="Main gate of NIT Durgapur in daylight">
+            </div>
+            <div id="nitFrame" class="photo-frame raised"></div>
             <div id="tree10" class="tree"></div>
             <div id="tree11" class="tree"></div>
             <div class="bump" id="bump1">
@@ -94,10 +98,11 @@
                 <div id="pls">
                     <div id="c"></div>
                     <div id="cpp"></div>
-                    <div id="java"></div>
                     <div id="js"></div>
                     <div id="kotlin"></div>
-                    <div id="php"></div>
+                    <div id="llm"></div>
+                    <div id="rag"></div>
+                    <div id="agents"></div>
                     <div id="python"></div>
                 </div>
                 <div id="skills"></div>
@@ -113,23 +118,17 @@
                                 <h3>Languages known</h3>
                                 ---------------------------------------------------
                                 <br>
-                                &nbsp;<strong>C</strong> --> ******----
+                                $ ls ~/skills/languages
                                 <br>
-                                &nbsp;<strong>C++</strong> --> *****-----
+                                &nbsp;<strong>Python &nbsp;TypeScript &nbsp;JavaScript &nbsp;SQL &nbsp;C++</strong>
                                 <br>
-                                &nbsp;<strong>Python</strong> --> ******----
+                                $ ls ~/skills/frameworks
                                 <br>
-                                &nbsp;<strong>JavaScript</strong> --> *****-----
+                                &nbsp;<strong>FastAPI &nbsp;Tornado &nbsp;React &nbsp;Node.js</strong>
                                 <br>
-                                &nbsp;<strong>Kotlin</strong> --> ****------
+                                &nbsp;<strong>Next.js &nbsp;Express.js</strong>
                                 <br>
-                                &nbsp;<strong>PHP</strong> --> *****-----
-                                <br>
-                                &nbsp;<strong>SQL</strong> --> ******----
-                                <br>
-                                &nbsp;<strong>HTML/CSS</strong> --> ******----
-                                <br>
-                                <span class="blink">_</span>
+                                $ <span class="blink">_</span>
                             </div>
                         </div>
                         <div class="spaceship-with-computer"></div>
@@ -139,19 +138,26 @@
                     <div class="spaceship-with-computer-container">
                         <div class="spaceship-computer">
                             <div class="spaceship-computer-screen">
-                                <h3>Graphic Software Known</h3>
+                                <h3>Data, AI &amp; Cloud</h3>
                                 ---------------------------------------------------
                                 <br>
-                                &nbsp;<strong>Photoshop</strong> --> ********--
+                                $ ls ~/skills/data-and-ai
                                 <br>
-                                &nbsp;<strong>ILLUSTRATOR</strong> --> ***-------
+                                &nbsp;<strong>Spark &nbsp;Iceberg &nbsp;Avro &nbsp;AMPS &nbsp;Pandas</strong>
                                 <br>
-                                <span class="blink">_</span>
+                                &nbsp;<strong>NumPy &nbsp;LangGraph &nbsp;LangChain &nbsp;RAG &nbsp;MCP</strong>
+                                <br>
+                                $ ls ~/skills/cloud
+                                <br>
+                                &nbsp;<strong>AWS &nbsp;Kubernetes</strong>
+                                <br>
+                                $ <span class="blink">_</span>
                             </div>
                         </div>
                         <div class="spaceship-with-computer"></div>
                     </div>
                 </div>
+                <div id="wormhole"></div>
                 <div id="occupation">
                     <div class="spaceship-with-computer-container">
                         <div class="spaceship-computer">
@@ -159,21 +165,67 @@
                                 <h3>Occupation</h3>
                                 --------------------------------------------------
                                 <br>
+                                $ whoami
                                 <br>
-                                A student of Electronics & Communication Engineering<span class="blink">_</span>
+                                &nbsp;<strong>sayak</strong>
+                                <br>
+                                $ cat ~/occupation
+                                <br>
+                                &nbsp;<strong>Software Engineer II @ JPMorgan Chase &amp; Co.</strong>
+                                <br>
+                                $ <span class="blink">_</span>
                             </div>
                         </div>
                         <div class="spaceship-with-computer"></div>
                     </div>
                 </div>
             </div>
-            <div id="toBeContinue">
-                <div id="toBeContinueText"></div>
-                <div class="blink" id="toBeContinueDots"></div>
+            <!-- Career chapter: starts where the rocket lands, positioned in resume.js -->
+            <div id="career">
+                <div class="tree career-tree" style="left: 900px; background-image: url('/resumeGame/images/tree-bright-d.png');"></div>
+                <div id="signBoard-career" class="signboard">
+                    <div class="signBoardText">
+                        <h2>Career</h2>Joined JPMorgan Chase &amp; Co. as an Intern, Feb 2023
+                    </div>
+                </div>
+                <!-- JPMorgan Chase, Bengaluru, hung in the same frame as the Chandannagar photo -->
+                <div id="jpmc" class="framed-photo raised">
+                    <img src="/resumeGame/images/jpmc-bengaluru.jpg" alt="JPMorgan Chase &amp; Co. office in Bengaluru in daylight">
+                </div>
+                <div id="jpmcFrame" class="photo-frame raised"></div>
+                <div class="tree career-tree" style="left: 2750px; background-image: url('/resumeGame/images/tree-dark-d.png');"></div>
+                <div id="signBoard-sde1" class="signboard">
+                    <div class="signBoardText">
+                        <h2>SDE I</h2>June 2023, building trade &amp; risk platforms
+                    </div>
+                </div>
+                <div id="signBoard-reporting" class="signboard">
+                    <div class="signBoardText">
+                        <h2>98%</h2>faster risk reports: 2 hours down to 2 minutes
+                    </div>
+                </div>
+                <div class="tree career-tree" style="left: 4250px; background-image: url('/resumeGame/images/tree-bright-d.png');"></div>
+                <div id="signBoard-throughput" class="signboard">
+                    <div class="signBoardText">
+                        <h2>5x</h2>throughput on the equity trade platform
+                    </div>
+                </div>
+                <div id="signBoard-sde2" class="signboard">
+                    <div class="signBoardText">
+                        <h2>SDE II</h2>Jan 2026, data &amp; AI platforms
+                    </div>
+                </div>
+                <div class="tree career-tree" style="left: 5800px; background-image: url('/resumeGame/images/tree-dark-d.png');"></div>
+                <div id="signBoard-mxp" class="signboard">
+                    <div class="signBoardText">
+                        <h2>Top 3</h2>MXP finalist: AI audit evidence in 5 min, not 2 days
+                    </div>
+                </div>
+                <div id="toBeContinue">
+                    <div id="toBeContinueText"></div>
+                    <div class="blink" id="toBeContinueDots"></div>
+                </div>
             </div>
-            <script>
-                $("#toBeContinue").css("left", (8000 + document.body.clientHeight * 11));
-            </script>
         </div>
         <div id="fakecontent" style="display: none;"></div>
         <script>
@@ -192,6 +244,7 @@
             <div id="rocket"></div>
         </div>
         <div id="glitters"></div>
+        <div id="warp"></div>
         <div id="moveleft" onmousedown="scrollWinLeft()" onmouseup="destroy()" onmouseleave="destroy()"></div>
         <div id="moveright" onmousedown="scrollWinRight()" onmouseout="destroy()" onmouseup="destroy()"></div>
     </main>
