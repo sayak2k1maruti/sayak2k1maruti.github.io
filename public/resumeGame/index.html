@@ -275,10 +275,10 @@
     </main>
     <a href="../index.html"><button id="backToHome">Back</button></a>
     <script>
-        document.getElementById("moveleft").addEventListener("touchstart", scrollWinLeft, true);
+        document.getElementById("moveleft").addEventListener("touchstart", function (e) { e.preventDefault(); scrollWinLeft(); }, { capture: true, passive: false });
         document.getElementById("moveleft").addEventListener("touchend", destroy, true);
         document.getElementById("moveleft").addEventListener("longtouch", scrollWinLeft, true);
-        document.getElementById("moveright").addEventListener("touchstart", scrollWinRight, true);
+        document.getElementById("moveright").addEventListener("touchstart", function (e) { e.preventDefault(); scrollWinRight(); }, { capture: true, passive: false });
         document.getElementById("moveright").addEventListener("touchend", destroy, true);
         document.getElementById("moveright").addEventListener("longtouch", scrollWinRight, true);
     </script>
